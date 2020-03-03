@@ -1,0 +1,48 @@
+# WeeChat is a fast, light and extensible chat client, with a text-based user interface. 
+# https://weechat.org/
+
+
+# See config options
+/set
+
+# Start Weechat
+weechat
+
+# Stop Weechat
+/quit
+
+# Add freenode server
+/server add freenode chat.freenode.net
+
+# Connect to freenode
+/connect freenode
+
+# Autoconnect to freenode
+/set irc.server.freenode.autoconnect on
+
+# Connect with SASL authentication
+/set irc.server.freenode.sasl_username "mynick"
+/set irc.server.freenode.sasl_password "xxxxxxx"
+
+# Autojoin channels
+/set irc.server.freenode.autojoin"#channel1"
+
+# Close current window
+/ close
+
+# Disconnect server
+/disconnect
+
+# Toggle windows
+F6 or click on channel name
+
+# Enable mouse
+/mouse enabled
+
+# Hide join/leave messages
+/filter add joinquit * irc_join,irc_part,irc_quit *
+
+# View color values
+/color
+
+

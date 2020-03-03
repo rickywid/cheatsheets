@@ -1,0 +1,43 @@
+# GNU Screen is a terminal multiplexer, a software application that can be used 
+# to multiplex several virtual consoles, allowing a user to access multiple separate 
+# login sessions inside a single terminal window, or detach and reattach 
+# sessions from a terminal. 
+#
+# https://www.gnu.org/software/screen/
+
+
+# Start Screen
+Screen
+
+# Create a new window (with shell)
+Ctrl+a c
+
+# List all window
+Ctrl+a "
+
+# Switch to window 0 (by number )
+Ctrl+a 0
+
+# Rename the current window
+Ctrl+a A
+
+# Split current region horizontally into two regions
+Ctrl+a S
+
+# Split current region vertically into two regions
+Ctrl+a |
+
+# Switch the input focus to the next region
+Ctrl+a tab
+
+# Toggle between the current and previous region
+Ctrl+a Ctrl+a
+
+# Scroll Mode
+Ctrl+a Esc
+
+# Close all regions but the current one
+Ctrl+a Q
+
+# Close the current region
+Ctrl+a X
