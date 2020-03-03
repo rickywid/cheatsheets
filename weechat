@@ -1,9 +1,9 @@
 # WeeChat is a fast, light and extensible chat client, with a text-based user interface. 
 # https://weechat.org/
 
-
-# See config options
-/set
+==================================
+Server Connection
+=================================
 
 # Start Weechat
 weechat
@@ -36,13 +36,33 @@ weechat
 # Toggle windows
 F6 or click on channel name
 
+# View Configuration Settings
+/set
+
+# View color values
+/color
+
+==================================
+Color Customization
+=================================
+
+# Change color of nick highlight (when your nick is mentioned)
+/set weechat.color.chat_highlight_bg color_value
+
+# Change color of your nick
+/set weechat.color.chat_nick_self color_value
+
+==================================
+Functionality
+=================================
+
 # Enable mouse
 /mouse enabled
 
 # Hide join/leave messages
 /filter add joinquit * irc_join,irc_part,irc_quit *
 
-# View color values
-/color
+# Move channel list to top
+/set weechat.bar.buflist.position top
 
 
