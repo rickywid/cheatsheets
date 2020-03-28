@@ -1,6 +1,8 @@
 # WeeChat is a fast, light and extensible chat client, with a text-based user interface. 
 # https://weechat.org/
 
+Configuration settings is used alongside Solarize Light terminal theme.
+
 ==================================
 Server Connection
 =================================
@@ -48,12 +50,21 @@ Color Customization
 
 # Change color of nick highlight (when your nick is mentioned)
 /set weechat.color.chat_highlight_bg color_value
-
+ 
 # Change color of your nick
 /set weechat.color.chat_nick_self color_value
 
-==================================
-Functionality
+# Change color of channel list bg color
+/set weechat.bar.buflist.color_bg color_value
+
+# Change color of inactive channel name
+.set buflist.format.hotlist_low "${color: color}"
+
+# Change color of inactive channel name
+/set buflist.format.buffer_current "${color:,color}${format_buffer}"
+
+==================================$
+Layout
 =================================
 
 # Enable mouse

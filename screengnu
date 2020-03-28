@@ -9,6 +9,8 @@
 # Start Screen
 Screen
 
+# Exit Screen
+ctrl+a ctrl+\
 # Create a new window (with shell)
 Ctrl+a c
 
