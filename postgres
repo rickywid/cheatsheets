@@ -1,0 +1,115 @@
+################################
+PSQL SETUP
+###############################
+Instructions on how to get Postgres setup with pgAdmin3
+
+
+1. Install Postgres
+
+2. Install pgadmin 3/4
+
+3. Create new super user and password
+sudo -u postgres createuser --superuser $USER
+ALTER USER user_name WITH PASSWORD 'new_password';
+
+
+4. Edit pg_hba.conf file
+sudo vi /var/lib/pgsql/data/pg_hba.conf
+
+(Change)
+# IPv4 local connections:
+host    all             all             127.0.0.1/32           ident
+
+(To)
+# IPv4 local connections:
+host    all             all             127.0.0.1/32           md5
+
+
+5. Restart postgres service (w/ Postgres 12)
+systemctl restart postgresql-12
+
+
+
+
+
+
+
+################################
+PGADMIN 3 - Create New Server
+###############################
+
+Name: localhost
+host: (blank)
+port: 5432 (default)
+service: (blank)
+Maintenance DB: postgres (default)
+username: <username> (your logged in username)
+password: (you can create one or leave blank) *this is the password you want to create for the server, NOT your username password
+color: (default)
+group: Servers (default)
+
+
+
+
+
+################################
+PSQL LOGIN
+###############################
+
+# Default Login
+sudo -u postgres psql
+
+# Login as specified user and database
+psql -U <user> <database>
+psql <database> <user>
+psql -U <user> --dbname = <database>
+
+
+
+################################
+BACKUP/RESTORE (pgadmin4) 
+###############################
+
+BACKUP
+
+1. Log into pgadmin4
+2. Right click database you want to backup
+3. Select "Backup..."
+4. Enter filename
+5. Format: Custom (default)
+6. Click Backup
+7. Backup file will be stored in /home dir
+
+RESTORE
+1. Log into pgadmin4
+2. Create new database
+3. Right click newly created database name
+4. Enter filename or select backup file in /home dir
+5. Restore should be complete
+
+
+################################
+PSQL COMMANDS 
+###############################
+
+# Show connection info
+\conninfo
+
+# Create new SUPERUSER
+sudo -u postgres createuser --superuser $USER
+
+# SET USER PASSWORD
+\password <user>
+
+# List all databases
+\list
+
+# Clear screen
+ctrl + l
+
+# List all users
+\du
+
+
+
+

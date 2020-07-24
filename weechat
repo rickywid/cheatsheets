@@ -47,21 +47,48 @@ F6 or click on channel name
 ==================================
 Color Customization
 =================================
+# Chat text color
+/set weechat.color.chat #color
+
+# Text color for nicks
+/set weechat.color.chat_nick_colors #color
 
 # Change color of nick highlight (when your nick is mentioned)
-/set weechat.color.chat_highlight_bg color_value
+/set weechat.color.chat_highlight_bg {color}
  
 # Change color of your nick
-/set weechat.color.chat_nick_self color_value
+/set weechat.color.chat_nick_self {color}
 
 # Change color of channel list bg color
-/set weechat.bar.buflist.color_bg color_value
+/set weechat.bar.buflist.color_bg {color}
 
 # Change color of inactive channel name
-.set buflist.format.hotlist_low "${color: color}"
+/set buflist.format.hotlist_low "${color: color}"
 
-# Change color of inactive channel name
+# Change inactive channel name bg color
 /set buflist.format.buffer_current "${color:,color}${format_buffer}"
+
+# Change fset bg color
+/set weechat.bar.fset.color_bg {color}
+
+# Change fset text color
+/set weechat.bar.fset.color_fg {color}
+
+# Channel title color
+/set weechat.title.color_bg {color}
+
+# Channel title bg color
+/set weechat.bar.title.color_fg {color}
+
+# Status bar bg color (the bar directly above the input box)
+/set weechat.bar.status.color_bg {color}
+
+# Change input bg color
+/set weechat.bar.input.color_bg {color}
+
+# Channel topic color
+/set irc.color.topic_current {color}
+
 
 ==================================$
 Layout
@@ -75,5 +102,8 @@ Layout
 
 # Move channel list to top
 /set weechat.bar.buflist.position top
+
+# Display channel list horizontally
+/set weechat.bar.buflist.filling_top_bottom horizontal
 
 
